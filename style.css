@@ -75,6 +75,16 @@ header h1 { font-size: 1.1rem; color: var(--primary); }
 }
 #progresso-label { color: var(--text2); font-size: .85rem; }
 
+/* TEXTO */
+#texto-container {
+  background: var(--surface); padding: 16px; border-bottom: 1px solid #333;
+  max-height: 300px; overflow-y: auto;
+}
+#ref-texto {
+  font-size: .9rem; line-height: 1.6; color: var(--text);
+  white-space: pre-wrap; font-family: Georgia, 'Times New Roman', serif;
+}
+
 /* LISTA */
 #lista-container {
   background: var(--bg); padding: 8px 16px; max-height: calc(100dvh - 200px);

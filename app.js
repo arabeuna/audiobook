@@ -57,6 +57,17 @@ function carregarReflexao(idx) {
   document.getElementById('ref-num').textContent = `#${ref.num}`;
   document.getElementById('progresso-label').textContent = `${idx + 1} / ${reflexoes.length}`;
 
+  // Carregar texto da reflexão
+  const numStr = String(ref.num).padStart(3, '0');
+  fetch(`textos/reflexao_${numStr}.txt`)
+    .then(r => r.text())
+    .then(txt => {
+      document.getElementById('ref-texto').textContent = txt;
+    })
+    .catch(() => {
+      document.getElementById('ref-texto').textContent = '';
+    });
+
   // Tenta carregar o áudio
   player.src = ref.src;
   player.load();
