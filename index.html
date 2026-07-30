@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>365 Reflexões Estoicas</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="description" content="Audiobook - 365 Reflexões Estoicas">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h1>365 Reflexões Estoicas</h1>
+      <p class="subtitle">Audiobook</p>
+      <input type="password" id="senha-input" placeholder="Digite a senha" autocomplete="off">
+      <button id="btn-entrar">Entrar</button>
+      <p id="login-erro" class="erro"></p>
+    </div>
+  </div>
+
+  <div id="app-screen" class="screen hidden">
+    <header>
+      <h1>365 Reflexões Estoicas</h1>
+      <div class="header-controls">
+        <button id="btn-toggle-lista" title="Lista">📋</button>
+        <button id="btn-sair" title="Sair">🚪</button>
+      </div>
+    </header>
+
+    <div id="player-bar">
+      <div id="info-audio">
+        <span id="ref-num"></span>
+        <span id="ref-titulo"></span>
+      </div>
+      <audio id="player" controls preload="metadata"></audio>
+      <div class="player-controls">
+        <button id="btn-anterior" title="Anterior">⏮</button>
+        <span id="progresso-label">0 / 350</span>
+        <button id="btn-proximo" title="Próximo">⏭</button>
+      </div>
+    </div>
+
+    <div id="lista-container" class="hidden">
+      <input type="text" id="busca" placeholder="Buscar reflexão...">
+      <div id="lista-reflexoes"></div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

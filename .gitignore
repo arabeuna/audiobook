@@ -1,0 +1,15 @@
+# PDF
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Temp
+texto_completo_ocr.txt

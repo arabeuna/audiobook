@@ -1,0 +1,6 @@
+pdfplumber
+pytesseract
+Pillow
+tqdm
+edge-tts
+pyttsx3
